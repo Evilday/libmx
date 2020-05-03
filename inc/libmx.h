@@ -12,12 +12,16 @@
 
 // Addition functions
 
-short mx_isspace(char c);
+bool mx_isspace(char c);
 char *mx_strchr(const char *s, int c);
 int mx_strncmp(const char *s1, const char *s2, int size);
 short mx_digits_num(long long num);
 void mx_swap_str(char **s1, char **s2);
 char *mx_strncat(char *restrict s1, const char *restrict s2, int len);
+int mx_atoi(const char *str);
+bool mx_isalpha(char c);
+bool mx_isdigit(char c);
+void mx_printerr(const char *s);
 
 // Utils pack
 void mx_printchar(char c);

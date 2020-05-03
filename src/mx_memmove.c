@@ -1,11 +1,10 @@
 #include "libmx.h"
 
 void *mx_memmove(void *dst, const void *src, size_t len) {
-	size_t i = 0;
+    char *copy = mx_strdup(src);
 
-	while (i < len) {
-		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
-		i++;
-	}
-	return dst;
+    for (size_t i = 0; i < len; ++i)
+        ((char *)dst)[i] = copy[i];
+    free(copy);
+    return dst;
 }

@@ -5,7 +5,7 @@ char *mx_strncpy(char *dst, const char *src, int len) {
 
 	while (*src && len--)
 		*to++ = *src++;
-	if (*src == '\0')
-		*to = '\0';
+	while (len-- > 0)
+		*to++ = '\0';
 	return dst;
 }
